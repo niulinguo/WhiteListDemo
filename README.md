@@ -15,7 +15,8 @@
 ## 适配的机型
 |厂商|手机型号|安卓版本|自启动|休眠|贡献人|
 |---|---|---|---|---|---|
-|三星（samsung）|SM-G9250|7.0|√|√|[niulinguo]|
+|samsung|SM-G9250|Android 7.0(24)|√|√|[niulinguo]|
+|OPPO|OPPO A57|Android 6.0.1(23)|√|√|[niulinguo]|
 
 
 [niulinguo]: https://github.com/niulinguo

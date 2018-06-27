@@ -22,6 +22,10 @@ public final class WhiteListManager implements Operation {
                 mOperation = new SamsungOperation(app);
                 break;
             }
+            case "OPPO": {
+                mOperation = new OppoOperation(app);
+                break;
+            }
             default: {
                 mOperation = new DefaultOperation(app);
             }
