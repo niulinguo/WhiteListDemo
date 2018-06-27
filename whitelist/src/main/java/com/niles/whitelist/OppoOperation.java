@@ -5,6 +5,7 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.support.annotation.NonNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +20,7 @@ class OppoOperation extends DefaultOperation {
     private final List<Intent> mAutoLaunchIntents = new ArrayList<>();
     private final List<Intent> mAppSleepIntents = new ArrayList<>();
 
-    OppoOperation(Application app) {
+    OppoOperation(@NonNull Application app) {
         super(app);
         final PackageManager packageManager = app.getPackageManager();
         {

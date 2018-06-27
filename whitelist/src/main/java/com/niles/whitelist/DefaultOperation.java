@@ -2,9 +2,11 @@ package com.niles.whitelist;
 
 import android.app.Application;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.provider.Settings;
+import android.support.annotation.NonNull;
 
 /**
  * Created by Negro
@@ -13,19 +15,20 @@ import android.provider.Settings;
  */
 class DefaultOperation implements Operation {
 
-    //    static final int RESOLVE_FLAG = PackageManager.GET_RESOLVED_FILTER;
-    static final int RESOLVE_FLAG = 0;
+    static final int RESOLVE_FLAG = PackageManager.GET_RESOLVED_FILTER;
+//    static final int RESOLVE_FLAG = 0;
 
+    @NonNull
     final Application mApp;
 
-    DefaultOperation(Application app) {
+    DefaultOperation(@NonNull Application app) {
         mApp = app;
     }
 
     @Override
     public void openSettings() throws NotSupportException {
-        final Intent intent = new Intent(Settings.ACTION_SETTINGS);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        final Intent intent = new Intent(Settings.ACTION_SETTINGS)
+                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         final ResolveInfo resolveInfo = mApp.getPackageManager().resolveActivity(intent, RESOLVE_FLAG);
         if (resolveInfo != null && resolveInfo.activityInfo.exported) {
             mApp.startActivity(intent);

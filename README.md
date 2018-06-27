@@ -17,6 +17,7 @@
 |---|---|---|---|---|---|---|
 |samsung|SM-G9250|Android 7.0(24)|√|√|√|[niulinguo]|
 |OPPO|OPPO A57|Android 6.0.1(23)|√|√|√|[niulinguo]|
+|Lenovo|Lenovo A3860|Android 5.1(22)|√|√|√|[niulinguo]|
 
 
 [niulinguo]: https://github.com/niulinguo
