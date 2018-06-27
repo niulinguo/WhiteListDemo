@@ -45,6 +45,11 @@ public final class WhiteListManager implements Operation {
     }
 
     @Override
+    public void openSettings() throws NotSupportException {
+        mOperation.openSettings();
+    }
+
+    @Override
     public void openAutoLaunch() throws NotSupportException {
         mOperation.openAutoLaunch();
     }

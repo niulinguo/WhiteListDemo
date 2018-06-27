@@ -8,6 +8,13 @@ package com.niles.whitelist;
 public interface Operation {
 
     /**
+     * 打开设置页面
+     *
+     * @throws NotSupportException 不支持的方法
+     */
+    void openSettings() throws NotSupportException;
+
+    /**
      * 打开自启动管理页面
      *
      * @throws NotSupportException 不支持的方法

@@ -2,6 +2,7 @@ package com.niles.whitelistdemo;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 import com.niles.whitelist.NotSupportException;
 import com.niles.whitelist.Operation;
@@ -13,13 +14,16 @@ public class MainActivity extends AppCompatActivity implements Operation {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        test();
     }
 
-    private void test() {
-        openAutoLaunch();
-        openAppSleep();
+    @Override
+    public void openSettings() {
+        try {
+            MyApp.getWhiteListManager().openSettings();
+        } catch (NotSupportException e) {
+            e.printStackTrace();
+            CrashReport.postCatchedException(e);
+        }
     }
 
     @Override
@@ -45,5 +49,17 @@ public class MainActivity extends AppCompatActivity implements Operation {
     @Override
     public String getInfo() {
         return MyApp.getWhiteListManager().getInfo();
+    }
+
+    public void openAutoLaunchClicked(View view) {
+        openAutoLaunch();
+    }
+
+    public void openAppSleepClicked(View view) {
+        openAppSleep();
+    }
+
+    public void openSettingsClicked(View view) {
+        openSettings();
     }
 }
