@@ -5,7 +5,7 @@ import android.os.Build;
 import android.support.annotation.NonNull;
 
 /**
- * Created by Negro
+ * Created by Niles
  * Date 2018/6/26
  * Email niulinguo@163.com
  */
@@ -64,7 +64,7 @@ public final class WhiteListManager implements Operation {
     }
 
     @Override
-    public String getInfo() {
-        return mOperation.getInfo();
+    public String getPhoneInfo() {
+        return mOperation.getPhoneInfo();
     }
 }

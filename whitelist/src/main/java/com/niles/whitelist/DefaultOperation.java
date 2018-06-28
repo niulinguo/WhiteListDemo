@@ -9,7 +9,7 @@ import android.provider.Settings;
 import android.support.annotation.NonNull;
 
 /**
- * Created by Negro
+ * Created by Niles
  * Date 2018/6/26
  * Email niulinguo@163.com
  */
@@ -33,7 +33,7 @@ class DefaultOperation implements Operation {
         if (resolveInfo != null && resolveInfo.activityInfo.exported) {
             mApp.startActivity(intent);
         } else {
-            throw new NotSupportException(getClass().getSimpleName(), null);
+            throw new NotSupportException(getClass(), null);
         }
     }
 
@@ -63,7 +63,7 @@ class DefaultOperation implements Operation {
     }
 
     @Override
-    public String getInfo() {
-        return new NotSupportException(getClass().getSimpleName(), null).getMessage();
+    public String getPhoneInfo() {
+        return new NotSupportException(getClass(), null).getMessage();
     }
 }

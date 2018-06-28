@@ -4,7 +4,7 @@ import android.app.Application;
 import android.support.annotation.NonNull;
 
 /**
- * Created by Negro
+ * Created by Niles
  * Date 2018/6/27
  * Email niulinguo@163.com
  */

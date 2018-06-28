@@ -7,7 +7,7 @@ import com.tencent.bugly.crashreport.BuglyLog;
 import com.tencent.bugly.crashreport.CrashReport;
 
 /**
- * Created by Negro
+ * Created by Niles
  * Date 2018/6/27
  * Email niulinguo@163.com
  */
@@ -25,6 +25,6 @@ public class MyApp extends Application {
         CrashReport.initCrashReport(getApplicationContext(), "3b7dad9631", true);
 
         sWhiteListManager = WhiteListManager.getInstance(this);
-        BuglyLog.e("phoneInfo", sWhiteListManager.getInfo());
+        BuglyLog.e("phoneInfo", sWhiteListManager.getPhoneInfo());
     }
 }

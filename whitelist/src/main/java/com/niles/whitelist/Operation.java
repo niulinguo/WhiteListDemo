@@ -1,7 +1,7 @@
 package com.niles.whitelist;
 
 /**
- * Created by Negro
+ * Created by Niles
  * Date 2018/6/26
  * Email niulinguo@163.com
  */
@@ -31,5 +31,5 @@ public interface Operation {
     /**
      * 获取手机信息
      */
-    String getInfo();
+    String getPhoneInfo();
 }

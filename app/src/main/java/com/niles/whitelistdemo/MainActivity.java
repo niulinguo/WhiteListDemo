@@ -3,6 +3,7 @@ package com.niles.whitelistdemo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
 
 import com.niles.whitelist.NotSupportException;
 import com.niles.whitelist.Operation;
@@ -10,10 +11,14 @@ import com.tencent.bugly.crashreport.CrashReport;
 
 public class MainActivity extends AppCompatActivity implements Operation {
 
+    private TextView mInfoView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mInfoView = findViewById(R.id.tv_phone_info);
+        mInfoView.setText(getPhoneInfo());
     }
 
     @Override
@@ -47,8 +52,8 @@ public class MainActivity extends AppCompatActivity implements Operation {
     }
 
     @Override
-    public String getInfo() {
-        return MyApp.getWhiteListManager().getInfo();
+    public String getPhoneInfo() {
+        return MyApp.getWhiteListManager().getPhoneInfo();
     }
 
     public void openAutoLaunchClicked(View view) {
